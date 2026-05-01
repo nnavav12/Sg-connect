@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Montserrat', sans-serif;
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: #f4f6f9;
+  --foreground: #12163b;
+  --card: #ffffff;
+  --card-foreground: #12163b;
+  --popover: #ffffff;
+  --popover-foreground: #12163b;
+  --primary: #f04141;
+  --primary-foreground: #ffffff;
+  --secondary: #12163b;
+  --secondary-foreground: #ffffff;
+  --muted: #f4f6f9;
+  --muted-foreground: #555555;
+  --accent: #adb5bd;
+  --accent-foreground: #12163b;
+  --destructive: #ef4444;
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #12163b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html, body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f6f9;
+    color: #12163b;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
